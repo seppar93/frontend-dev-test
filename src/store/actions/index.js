@@ -1,6 +1,6 @@
 export const addMove = (cell, player) => {
   return {
-    type: "ADD_MOVE",
+    type: "ADD-MOVE",
     cell: cell,
     player: player
   };
