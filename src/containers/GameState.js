@@ -58,11 +58,25 @@ const getStatusMessage = (cells, player) => {
 
 const mapStateToProps = state => {
   return {
+    player: state["player"],
+    cells: state["cells"],
+    message: getStatusMessage(state["cells"], state["player"])
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
     onSetCell: (cell, cells, player) => {
-      if (isValidMove(cells, cell)) dispatchEvent(addMove(cell, player));
+      if (isValidMove(cells, cell)) dispatch(addMove(cell, player));
     },
     onReset: () => {
-      dispatchEvent(resetGame());
+      dispatch(resetGame());
     }
   };
 };
+
+const GameState = connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(TicTactToe);
+export default GameState;
