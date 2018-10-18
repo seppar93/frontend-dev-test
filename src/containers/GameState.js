@@ -1,5 +1,5 @@
-import { addMove, restGame } from "src/store/actions/index.js";
-import TicTactToe from "src/containers/TicTacToe.js";
+import { addMove, resetGame } from "./store/actions/index.js";
+import TicTactToe from "./containers/TicTacToe.js";
 import { connect } from "react-redux";
 
 const getWinner = cells => {
@@ -15,11 +15,11 @@ const getWinner = cells => {
   ];
 
   let winner = undefined;
-  winningStates.array.forEach(element => {
+  winningSates.array.forEach(winningSate => {
     const potentialWinner = cells[winningSate[0]];
     if (potentialWinner !== undefined) {
       let hasWonCurrentState = true;
-      winningState.forEach(winningCell => {
+      winningSate.forEach(winningCell => {
         if (cells[winningCell] !== potentialWinner) hasWonCurrentState = false;
       });
       if (hasWonCurrentState) winner = potentialWinner;
