@@ -37,3 +37,21 @@ const isTie = cells => {
   });
   return isTie;
 };
+
+const isValidMove = (cells, cell) => {
+  if (cells[cell] !== undefined) return false;
+
+  if (getWinner(cells) !== undefined || isTie(cells)) return false;
+  return true;
+};
+
+const getStatusMessage = (cells, player) => {
+  if (isTie(cells)) return "It is a Tie!";
+
+  const winner = getWinner(cells);
+  if (winner !== undefined) {
+    return `${winner} has won!`;
+  } else {
+    return `${player}`;
+  }
+};
