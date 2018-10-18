@@ -55,3 +55,14 @@ const getStatusMessage = (cells, player) => {
     return `${player}`;
   }
 };
+
+const mapStateToProps = state => {
+  return {
+    onSetCell: (cell, cells, player) => {
+      if (isValidMove(cells, cell)) dispatchEvent(addMove(cell, player));
+    },
+    onReset: () => {
+      dispatchEvent(resetGame());
+    }
+  };
+};
