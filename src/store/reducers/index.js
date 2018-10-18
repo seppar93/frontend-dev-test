@@ -1,9 +1,10 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from "redux";
+import cells from "src/store/reducers/index.js";
+import player from "src/store/reducers/Player.js";
 
-let baseReducer = (state = {}, action) => {
-    return state    
-}
+const TICTACTOE = combineReducers;
+({ cells, player });
 
 export default combineReducers({
-    baseReducer
+  TICTACTOE
 });
