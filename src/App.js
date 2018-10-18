@@ -16,17 +16,20 @@ class App extends Component {
       player: "X"
     };
   }
+
   handleClick(index) {
     let newBoard = this.state.board;
-    newBoard[index] = this.state.player;
 
-    this.setState({
-      board: newBoard,
-      player: this.state.player === "X" ? "O" : "X"
-    });
-    console.log(this.state.board);
+    if (this.state.board[index] === null) {
+      newBoard[index] = this.state.player;
+      this.setState({
+        board: newBoard,
+        player: this.state.player === "X" ? "O" : "X"
+      });
+      console.log(this.state.board);
 
-    console.log(index);
+      console.log(index);
+    }
   }
   render() {
     const Box = this.state.board.map((box, index) => (
