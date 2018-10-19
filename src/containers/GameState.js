@@ -15,12 +15,12 @@ const getWinner = cells => {
   ];
 
   let winner = undefined;
-  winningSates.array.forEach(winningSate => {
-    const potentialWinner = cells[winningSate[0]];
+  winningSates.forEach(winningState => {
+    const potentialWinner = winningState[0];
     if (potentialWinner !== undefined) {
       let hasWonCurrentState = true;
-      winningSate.forEach(winningCell => {
-        if (cells[winningCell] !== potentialWinner) hasWonCurrentState = false;
+      winningState.forEach(winningCell => {
+        if (winningCell !== potentialWinner) hasWonCurrentState = false;
       });
       if (hasWonCurrentState) winner = potentialWinner;
     }
