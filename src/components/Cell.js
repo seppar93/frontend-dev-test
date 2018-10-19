@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Cell extends Component {
+export default class Cell extends Componenet {
   render() {
     return (
       <div onClick={this.props.onPress} className="cell">
@@ -9,4 +9,3 @@ class Cell extends Component {
     );
   }
 }
-export default Cell;

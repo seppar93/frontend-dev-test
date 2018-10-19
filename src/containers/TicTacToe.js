@@ -3,7 +3,7 @@ import Cell from "../components/Cell.js";
 import Button from "../components/Button.js";
 import Message from "../components/Message";
 
-class TicTacToe extends React.Component {
+export default class TicTacToe extends Componenet {
   render() {
     const game = this;
 
@@ -33,4 +33,3 @@ class TicTacToe extends React.Component {
     );
   }
 }
-export default TicTacToe;
