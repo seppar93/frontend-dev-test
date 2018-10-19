@@ -1,5 +1,5 @@
-import { addMove, resetGame } from "./store/actions/index.js";
-import TicTacToe from "./containers/GameState.js";
+import { addMove, resetGame } from "../store/actions/index.js";
+import TicTacToe from "./TicTacToe.js";
 import { connect } from "react-redux";
 
 const getWinner = cells => {

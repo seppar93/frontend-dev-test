@@ -1,10 +1,8 @@
 import React from "react";
 
-class Message extends Componenet {
+class Message extends React.Componenet {
   render() {
-    return (
-       <div className="flashline">{this.props.message}</div>;
-    );
+    return <div className="flashline">{this.props.message}</div>;
   }
 }
 

@@ -1,4 +1,4 @@
-import TICTACTOE from "./store/actions/index.js";
+import TICTACTOE from "./reducers/index";
 
 import { createStore } from "redux";
 import logger from "redux-logger";

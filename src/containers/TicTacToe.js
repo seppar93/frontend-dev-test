@@ -1,9 +1,9 @@
 import React from "react";
-import Cell from "./components/Cell.js";
-import Button from "./components/Button.js";
-import Message from "./components/Message.js";
+import Cell from "../components/Cell.js";
+import Button from "../components/Button.js";
+import Message from "../components/Message";
 
-class TicTacToe extends Component {
+class TicTacToe extends React.Component {
   render() {
     const game = this;
 
@@ -16,7 +16,7 @@ class TicTacToe extends Component {
               key={cell}
               state={value}
               onPress={evt => {
-                game.props.onSetCell(cell, thisprops.cells, thisprops.player);
+                game.props.onSetCell(cell, this.props.cells, this.props.player);
               }}
             />
           ))}

@@ -1,6 +1,6 @@
 import { combineReducers } from "redux";
-import cells from "./store/reducers/index.js";
-import player from "./store/reducers/Player.js";
+import cells from "./Cells.js";
+import player from "./Player.js";
 
 const TICTACTOE = combineReducers;
 ({ cells, player });
