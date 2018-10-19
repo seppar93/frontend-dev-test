@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-class Cell extends Component {
+class Credits extends Component {
   render() {
     return (
       <div onClick={this.props.onPress} className="cell">
