@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import store from "./store/Store.js";
 import GameState from "./containers/GameState.js";
 import { Provider } from "react-redux";
+import Credits from "./components/Credits";
 
 import "./App.css";
 
