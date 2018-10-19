@@ -1,5 +1,5 @@
 import { addMove, resetGame } from "./store/actions/index.js";
-import TicTactToe from "./containers/TicTacToe.js";
+import TicTacToe from "./containers/GameState.js";
 import { connect } from "react-redux";
 
 const getWinner = cells => {
@@ -78,5 +78,5 @@ const mapDispatchToProps = dispatch => {
 const GameState = connect(
   mapStateToProps,
   mapDispatchToProps
-)(TicTactToe);
+)(TicTacToe);
 export default GameState;
