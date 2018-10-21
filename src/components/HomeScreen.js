@@ -4,6 +4,7 @@ import "./App.css";
 import Game from "./Game";
 import NewGame from "./NewGame";
 import Credits from "./Credits";
+import { Link } from "react-router-dom";
 
 const mapStateToProps = function(state, props) {
   return {};
@@ -16,9 +17,11 @@ class App extends Component {
     return (
       <React.Fragment>
         <h1 className="heading">Tic Tac Toe </h1>
-        {/* <Game /> */}
-        <NewGame />
-        <Credits />
+        <Link to={"/credits"}>Credits</Link>
+        <Link to={"/game"}>Game</Link>
+        <Link to={"/new-game"}>NewGame</Link>
+
+        {this.props.children}
       </React.Fragment>
     );
   }

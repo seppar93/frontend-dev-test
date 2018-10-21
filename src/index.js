@@ -15,11 +15,16 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 ReactDOM.render(
   <Provider store={configureStore()}>
     <Router>
-      <Route path="/" component={HomeScreen}>
-        <Route path="/new-game" component={NewGame} />
-      </Route>
-      <Route path="/credits" component={Credits} />
-      <Route path="/game" component={Game} />
+      <div>
+        <Route path="/">
+          <div>
+            <Route path="/" component={HomeScreen} />
+            <Route path="/new-game" component={NewGame} />
+          </div>
+        </Route>
+        <Route exact path="/credits" component={Credits} />
+        <Route exact path="/game" component={Game} />
+      </div>
     </Router>
   </Provider>,
   document.getElementById("root")
