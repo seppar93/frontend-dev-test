@@ -27,9 +27,9 @@ class App extends Component {
   }
 }
 
-// export default App;
+export default App;
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(App);
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(App);

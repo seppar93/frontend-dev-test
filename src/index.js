@@ -4,16 +4,19 @@ import "./index.css";
 import App from "./components/HomeScreen.js";
 import registerServiceWorker from "./registerServiceWorker";
 import { Provider } from "react-redux";
-import configureStore from "./store";
 import HomeScreen from "./components/HomeScreen.js";
 import Credits from "./components/Credits";
 import Game from "./components/Game";
-import NewGame from "./components/NewGame";
+import NewGame from "./containers/NewGame";
 
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { createStore } from "redux";
+import reducers from "./reducers";
+
+const store = createStore(reducers);
 
 ReactDOM.render(
-  <Provider store={configureStore()}>
+  <Provider store={store}>
     <Router>
       <div>
         <Route path="/">

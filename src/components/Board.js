@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import styles from "./Board.css";
 
 class Board extends Component {
   render() {

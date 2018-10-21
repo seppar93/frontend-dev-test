@@ -5,7 +5,6 @@ class NewGame extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      player1Name: "",
       player2Name: ""
     };
   }
@@ -25,8 +24,8 @@ class NewGame extends Component {
           <input
             type="text"
             name="player1Name"
-            value={this.state.player1Name}
-            onChange={this.changeHandler}
+            value={this.props.player1Name}
+            onChange={e => this.props.player1NameChanged(e.target.value)}
           />
         </label>
 
