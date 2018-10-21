@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+.box {
+  flex: 1;
+  height: 80px;
+  border: 1px solid black;
+  display: inline-block;
+  line-height: 30px;
+}
+
+.board {
+  /* display: flex; */
+  /* flex-wrap: wrap; */
+  /* width: 346px; */
+  flex: 0 1 500px;
+}
+.row {
+  /* width: 50%; */
+  display: flex;
+}
