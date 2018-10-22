@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Board from "./Board";
+import "./Game.css";
 
 class Game extends Component {
   constructor(props) {
@@ -10,15 +11,21 @@ class Game extends Component {
       player: "X"
     };
   }
+  checkWinner() {}
+
   handleClick = (row, col) => {
     let newBoard = this.state.board;
-    newBoard[row][col] = this.state.player;
-
-    this.setState({
-      board: newBoard,
-      player: this.state.player === "X" ? "O" : "X"
-    });
+    // newBoard[row][col] = this.state.player;
+    if (this.state.board[row][col] === null) {
+      newBoard[row][col] = this.state.player;
+      this.setState({
+        board: newBoard,
+        player: this.state.player === "X" ? "O" : "X"
+      });
+    }
+    this.checkWinner();
   };
+
   render() {
     return (
       <Board
