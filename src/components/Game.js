@@ -20,6 +20,37 @@ class Game extends Component {
       xIsNext: true
     };
   }
+  handleClick(x, y) {
+    const history = this.state.history.slice(0, this.state.stepNumber + 1);
+    const current = history[history.length - 1];
+    const squares = cloneNestedArray(current.squares.slice());
+    const highLights = this.state.highLights;
+
+    if (highLights.length > 0 || squares[x][y]) {
+      return;
+    }
+
+    squares[x][y] = this.state.xIsNext ? "X" : "O";
+    const checked = { x: x + 1, y: y + 1 };
+
+    const winner = calculateWinner(squares);
+
+    if (winner) {
+      this.updateHighLights(winner);
+    }
+
+    this.setState({
+      history: history.concat([
+        {
+          squares,
+          checked
+        }
+      ]),
+      stepNumber: history.length,
+      xIsNext: !this.state.xIsNext
+    });
+  }
+
   checkWinner() {
     let winLines = [
       ["0", "1", "2"],
@@ -41,21 +72,6 @@ class Game extends Component {
       }
     }
   }
-
-  handleClick = (row, col) => {
-    let newBoard = this.state.board;
-    // newBoard[row][col] = this.state.player;
-    if (this.state.board[index] === null && !this.state.winner) {
-      if (this.state.board[row][col] === null) {
-        newBoard[row][col] = this.state.player;
-        this.setState({
-          board: newBoard,
-          player: this.state.player === "X" ? "O" : "X"
-        });
-      }
-      this.checkWinner();
-    }
-  };
 
   render() {
     return (
