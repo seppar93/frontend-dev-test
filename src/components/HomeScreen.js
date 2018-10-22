@@ -5,6 +5,7 @@ import Game from "./Game";
 import NewGame from "./NewGame";
 import Credits from "./Credits";
 import { Link } from "react-router-dom";
+import "./HomeScreen.css";
 
 const mapStateToProps = function(state, props) {
   return {};
@@ -16,10 +17,21 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <h1 className="heading">Tic Tac Toe </h1>
-        <Link to={"/credits"}>Credits</Link>
-        <Link to={"/game"}>Game</Link>
-        <Link to={"/new-game"}>NewGame</Link>
+        <div className="header__text-box">
+          <img
+            className="heading-primary"
+            src={require("../assets/logo.png")}
+          />
+          <Link className="btn btn--white btn--animated" to={"/credits"}>
+            Credits
+          </Link>
+          <Link className="btn btn--white btn--animated" to={"/game"}>
+            Game
+          </Link>
+          <Link className="btn btn--white btn--animated" to={"/new-game"}>
+            NewGame
+          </Link>
+        </div>
 
         {this.props.children}
       </React.Fragment>
