@@ -4,26 +4,57 @@ import "./Game.css";
 
 class Game extends Component {
   constructor(props) {
-    super(props);
-    // this.handleClick = this.handleClick.bind(this);
+    super();
     this.state = {
-      board: [[null, null, null], [null, null, null], [null, null, null]],
-      player: "X"
+      history: [
+        {
+          squares: [[null, null, null], [null, null, null], [null, null, null]],
+          checked: {
+            x: 0,
+            y: 0
+          }
+        }
+      ],
+      highLights: [],
+      stepNumber: 0,
+      xIsNext: true
     };
   }
-  checkWinner() {}
+  checkWinner() {
+    let winLines = [
+      ["0", "1", "2"],
+      ["3", "4", "5"],
+      ["6", "7", "8"],
+      ["0", "3", "6"],
+      ["1", "4", "7"],
+      ["2", "5", "8"],
+      ["0", "4", "8"],
+      ["2", "4", "6"]
+    ];
+    for (let index = 0; index < winLines.length; index++) {
+      const [a, b, c] = winLines[index];
+      let board = this.state.board;
+
+      if (board[a] && board[a] === board[b] && board[a] === board[c]) {
+        alert("you won");
+        winner: this.state.player;
+      }
+    }
+  }
 
   handleClick = (row, col) => {
     let newBoard = this.state.board;
     // newBoard[row][col] = this.state.player;
-    if (this.state.board[row][col] === null) {
-      newBoard[row][col] = this.state.player;
-      this.setState({
-        board: newBoard,
-        player: this.state.player === "X" ? "O" : "X"
-      });
+    if (this.state.board[index] === null && !this.state.winner) {
+      if (this.state.board[row][col] === null) {
+        newBoard[row][col] = this.state.player;
+        this.setState({
+          board: newBoard,
+          player: this.state.player === "X" ? "O" : "X"
+        });
+      }
+      this.checkWinner();
     }
-    this.checkWinner();
   };
 
   render() {
