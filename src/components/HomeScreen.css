@@ -30,7 +30,7 @@
 }
 .btn:hover {
   transform: translateY(-3rem);
-  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2); /* The shadow on the box*/
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 .btn:active {
   transform: translateY(-1px);
@@ -43,9 +43,7 @@
   justify-content: center;
 }
 .btn::after {
-  /* treated as its child*/
-  /* this is an element behind the buton virtual element*/
-  content: ""; /* you have to specficy*/
+  content: "";
   display: inline-block;
   height: 100%;
   width: 100%;
@@ -53,22 +51,22 @@
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1; /* define the postion of elements on top of each other*/
-  /* this is the inital state for the animation for hovering */
+  z-index: -1;
+
   transition: all 0.4s;
 }
-/* we are trying to put this behind our button*/
+
 .btn--white::after {
   background-color: #ffffff;
 }
 .btn:hover::after {
-  transform: scaleX(1.4) scaleY(1.6); /* scale increases the size */
+  transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
 }
 
 .btn--animated {
   animation: moveInBottom 0.5s ease-in-out 0.75s;
-  animation-fill-mode: backwards; /* applies the 0% style before it starts*/
+  animation-fill-mode: backwards;
 }
 html {
   background: linear-gradient(
