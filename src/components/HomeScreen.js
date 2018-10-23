@@ -20,7 +20,7 @@ class HomeScreen extends Component {
       <React.Fragment>
         <img className="heading-primary" src={require("../assets/logo.png")} />
         <div className="content">
-          {/* <div className="header__text-box">
+          <div className="header__text-box">
             <Link className="btn btn--white btn--animated" to={"/credits"}>
               Credits
             </Link>
@@ -30,7 +30,7 @@ class HomeScreen extends Component {
             <Link className="btn btn--white btn--animated" to={"/new-game"}>
               New Game
             </Link>
-          </div> */}
+          </div>
         </div>
 
         {this.props.children}
