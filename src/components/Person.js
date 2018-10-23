@@ -11,13 +11,12 @@ export default class Person extends Component {
     return (
       <div class="container">
         <div class="interior">
-          <a class="btn" href="#open-modal"><i class="fas fa-external-link-alt"></i> Basic CSS-Only Modal</a>
+          <a class="btn" href="#open-modal"><i class="fas fa-external-link-alt"></i> Credits</a>
         </div>
       </div>
       <div id="open-modal" class="modal-window">
         <div>
           <a href="#" title="Close" class="modal-close">Close</a>
-          <h1>Voilà!</h1>
           <Credits />
           </div>
         </div>

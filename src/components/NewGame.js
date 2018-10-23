@@ -44,6 +44,4 @@ class NewGame extends Component {
   }
 }
 
-// export default App;
-
 export default NewGame;
