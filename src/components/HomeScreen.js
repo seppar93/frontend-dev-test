@@ -13,10 +13,11 @@ const mapStateToProps = function(state, props) {
 
 const mapDispatchToProps = dispatch => ({});
 
-class App extends Component {
+class HomeScreen extends Component {
   render() {
     return (
-      <React.Fragment>
+      // <React.Fragment>
+      <div>
         <div className="content">
           <div className="header__text-box">
             <img
@@ -35,13 +36,14 @@ class App extends Component {
           </div>
         </div>
 
-        {this.props.children}
-      </React.Fragment>
+        {/* {this.props.children} */}
+        {/* </React.Fragment> */}
+      </div>
     );
   }
 }
 
-export default App;
+export default HomeScreen;
 
 // export default connect(
 //   mapStateToProps,

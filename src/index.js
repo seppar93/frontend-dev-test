@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 // import "./index.css";
-import App from "./components/HomeScreen.js";
 import registerServiceWorker from "./registerServiceWorker";
 import { Provider } from "react-redux";
 import HomeScreen from "./components/HomeScreen.js";
