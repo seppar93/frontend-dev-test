@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Credits from "./Credits";
+import "./Person.css"
 
 export default class Person extends Component {
   state = {
@@ -8,10 +9,30 @@ export default class Person extends Component {
 
   render() {
     return (
-      <React.Fragment>
-        <Credits />
-      </React.Fragment>
-      // <h1>Test</h1>
+      <div class="container">
+        <div class="interior">
+          <a class="btn" href="#open-modal"><i class="fas fa-external-link-alt"></i> Basic CSS-Only Modal</a>
+        </div>
+      </div>
+      <div id="open-modal" class="modal-window">
+        <div>
+          <a href="#" title="Close" class="modal-close">Close</a>
+          <h1>Voilà!</h1>
+          <Credits />
+          </div>
+        </div>
+
+
+
+
+
+
+
+
+
+      // <React.Fragment>
+      //   <Credits />
+      // </React.Fragment>
     );
   }
 }

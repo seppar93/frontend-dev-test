@@ -17,20 +17,22 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-        <div className="header__text-box">
-          <img
-            className="heading-primary"
-            src={require("../assets/logo.png")}
-          />
-          <Link className="btn btn--white btn--animated" to={"/credits"}>
-            Credits
-          </Link>
-          <Link className="btn btn--white btn--animated" to={"/game"}>
-            Game
-          </Link>
-          <Link className="btn btn--white btn--animated" to={"/new-game"}>
-            NewGame
-          </Link>
+        <div className="content">
+          <div className="header__text-box">
+            <img
+              className="heading-primary"
+              src={require("../assets/logo.png")}
+            />
+            <Link className="btn btn--white btn--animated" to={"/credits"}>
+              Credits
+            </Link>
+            <Link className="btn btn--white btn--animated" to={"/game"}>
+              Game
+            </Link>
+            <Link className="btn btn--white btn--animated" to={"/new-game"}>
+              NewGame
+            </Link>
+          </div>
         </div>
 
         {this.props.children}

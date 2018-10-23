@@ -1,11 +1,9 @@
 .header__text-box {
-  /* its 50% of the width and height of the parent elemnt */
   position: absolute;
   top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /*  ^^this is shifted from the element not the parent element  */
-  text-align: center; /* The button is in here and treated as text to center */
+  text-align: center;
 }
 
 .heading-primary {
@@ -18,13 +16,12 @@
 
 .btn:link,
 .btn:visited {
-  /* ^^ Sudo class style elements on speical condtions */
   text-transform: uppercase;
   text-decoration: none;
   padding: 1.5rem 4rem;
-  display: inline-block; /* treated as text*/
-  border-radius: 10rem; /* rounds the corrners*/
-  transition: all 0.2s; /* simple animation it has to be on the inital state*/
+  display: inline-block;
+  border-radius: 10rem;
+  transition: all 0.2s;
   position: relative;
   font-size: 1.6rem;
 }
@@ -68,8 +65,8 @@
   animation: moveInBottom 0.5s ease-in-out 0.75s;
   animation-fill-mode: backwards;
 }
-html {
-  background: linear-gradient(
+body {
+  /* background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0.15) 0%,
       rgba(0, 0, 0, 0.15) 100%
@@ -80,5 +77,6 @@ html {
         rgba(0, 0, 0, 0.4) 120%
       )
       #989898;
-  background-blend-mode: multiply, multiply;
+  background-blend-mode: multiply, multiply; */
+  /* background-color: black; */
 }

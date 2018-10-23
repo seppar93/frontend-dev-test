@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Board from "./Board";
 import MoveList from "./MoveList";
-import "./Game.css";
+// import "./Game.css";
 import { calculateWinner, cloneNestedArray } from "../utils";
 
 class Game extends Component {
