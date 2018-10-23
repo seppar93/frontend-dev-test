@@ -6,6 +6,7 @@ import NewGame from "./NewGame";
 import Credits from "./Credits";
 import { Link } from "react-router-dom";
 import "./HomeScreen.css";
+import NavBar from "./NavBar.js";
 
 const mapStateToProps = function(state, props) {
   return {};
@@ -16,8 +17,7 @@ const mapDispatchToProps = dispatch => ({});
 class HomeScreen extends Component {
   render() {
     return (
-      // <React.Fragment>
-      <div>
+      <React.Fragment>
         <div className="content">
           <div className="header__text-box">
             <img
@@ -36,9 +36,8 @@ class HomeScreen extends Component {
           </div>
         </div>
 
-        {/* {this.props.children} */}
-        {/* </React.Fragment> */}
-      </div>
+        {this.props.children}
+      </React.Fragment>
     );
   }
 }

@@ -16,34 +16,24 @@ const mapDispatchToProps = dispatch => ({});
 class NavBar extends Component {
   render() {
     return (
-      // <React.Fragment>
-      <div>
-        <div className="content">
-          <div className="header__text-box">
-            <img
-              className="heading-primary"
-              src={require("../assets/logo.png")}
-            />
-            <Link className="btn btn--white btn--animated" to={"/credits"}>
-              Credits
-            </Link>
-            <Link className="btn btn--white btn--animated" to={"/game"}>
-              Game
-            </Link>
-            <Link className="btn btn--white btn--animated" to={"/new-game"}>
-              NewGame
-            </Link>
-          </div>
+      <nav className="navbar navbar-expand-md navbar-dark bg-primary mb-4">
+        <div className="container">
+          <Link to="/" className="navbar-brand" />
+          <button
+            className="navbar-toggler"
+            type="button"
+            data-toggle="collapse"
+            data-target="#navbarMain"
+          >
+            <span className="navbar-toggler-icon" />
+          </button>
         </div>
-
-        {/* {this.props.children} */}
-        {/* </React.Fragment> */}
-      </div>
+      </nav>
     );
   }
 }
 
-export default HomeScreen;
+export default NavBar;
 
 // export default connect(
 //   mapStateToProps,
