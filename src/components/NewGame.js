@@ -18,30 +18,33 @@ class NewGame extends Component {
   };
   render() {
     return (
-      <div className="form">
-        <form className="user-name-input">
-          <label>
-            Player1:
-            <input
-              type="text"
-              name="player1Name"
-              value={this.props.player1Name}
-              onChange={e => this.props.player1NameChanged(e.target.value)}
-            />
-          </label>
-
-          <label>
-            Player2:
-            <input
-              type="text"
-              name="player2Name"
-              value={this.state.player2Name}
-              onChange={this.changeHandler}
-            />
-          </label>
+      <form>
+        <div class="form-row">
+          <div class="col">
+            <label>
+              Player1:
+              <input
+                type="text"
+                name="player1Name"
+                value={this.props.player1Name}
+                onChange={e => this.props.player1NameChanged(e.target.value)}
+              />
+            </label>
+          </div>
+          <div class="col">
+            <label>
+              Player2:
+              <input
+                type="text"
+                name="player2Name"
+                value={this.state.player2Name}
+                onChange={this.changeHandler}
+              />
+            </label>
+          </div>
           <input type="submit" value="Submit" />
-        </form>
-      </div>
+        </div>
+      </form>
     );
   }
 }

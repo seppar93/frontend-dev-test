@@ -18,12 +18,9 @@ class HomeScreen extends Component {
   render() {
     return (
       <React.Fragment>
+        <img className="heading-primary" src={require("../assets/logo.png")} />
         <div className="content">
-          <div className="header__text-box">
-            <img
-              className="heading-primary"
-              src={require("../assets/logo.png")}
-            />
+          {/* <div className="header__text-box">
             <Link className="btn btn--white btn--animated" to={"/credits"}>
               Credits
             </Link>
@@ -31,9 +28,9 @@ class HomeScreen extends Component {
               Game
             </Link>
             <Link className="btn btn--white btn--animated" to={"/new-game"}>
-              NewGame
+              New Game
             </Link>
-          </div>
+          </div> */}
         </div>
 
         {this.props.children}
