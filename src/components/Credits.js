@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import "./Credits.css";
 
 export default class Credits extends Component {
   state = {
@@ -22,14 +23,20 @@ export default class Credits extends Component {
   }
 
   render() {
-    debugger;
     return (
-      <ul>
-        {this.state.persons.map(person => (
-          <li key={person}>{person}</li>
-        ))}
-      </ul>
-      // <h1>Test</h1>
+      <div>
+        <img className="heading-primary" src={require("../assets/logo.png")} />
+        <h3>Credits</h3>
+        <ul className="person">
+          {this.state.persons.map(person => (
+            <li className="indavidual" key={person}>
+              {person}
+            </li>
+          ))}
+        </ul>
+      </div>
     );
+
+    // <h1>Test</h1>
   }
 }

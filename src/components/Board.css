@@ -6,6 +6,7 @@
   color: #fff;
   border: 6px solid #2c3e50;
   border-radius: 10px;
+  padding: 1.5rem 4rem;
 }
 
 button.square {
@@ -37,4 +38,5 @@ button.square {
   border: 6px solid #2c3e50;
   border-radius: 10px;
   text-align: center;
+  position: relative;
 }
