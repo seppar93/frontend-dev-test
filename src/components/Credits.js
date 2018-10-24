@@ -22,6 +22,7 @@ export default class Credits extends Component {
   }
 
   render() {
+    debugger;
     return (
       <ul>
         {this.state.persons.map(person => (
