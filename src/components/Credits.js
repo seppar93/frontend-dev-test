@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
-import "./Credits.css";
+import "./style/Credits.css";
 
 export default class Credits extends Component {
   state = {

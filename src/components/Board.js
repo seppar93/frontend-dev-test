@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./Board.css";
+import styles from "./style/Board.css";
 import Row from "./Row";
 
 class Board extends Component {

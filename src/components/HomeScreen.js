@@ -1,11 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import "./App.css";
 import Game from "./Game";
 import NewGame from "./NewGame";
 import Credits from "./Credits";
 import { Link } from "react-router-dom";
-import "./HomeScreen.css";
+import "./style/HomeScreen.css";
 import NavBar from "./NavBar.js";
 
 const mapStateToProps = function(state, props) {
