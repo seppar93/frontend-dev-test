@@ -29,9 +29,9 @@ export default class Credits extends Component {
         <h3>Credits</h3>
         <ul className="person">
           {this.state.persons.map(person => (
-            <li className="indavidual" key={person}>
+            <p className="indavidual" key={person}>
               {person}
-            </li>
+            </p>
           ))}
         </ul>
       </div>

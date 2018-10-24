@@ -1,5 +1,5 @@
 .heading-primary {
-  color: black;
+  /* color: black; */
   text-transform: uppercase;
   margin-bottom: 6rem;
   text-align: center;
@@ -14,12 +14,13 @@
   box-shadow: 0 2px 2px #ccc;
   width: 200px;
   padding: 20px;
-  background-color: blue;
+  background-color: gray;
   margin: 0% auto;
   padding: 1.5rem 4rem;
 }
 .indavidual {
   color: azure;
+  text-align: center;
 }
 
 h3 {
