@@ -14,18 +14,6 @@ const mapStateToProps = function(state, props) {
 const mapDispatchToProps = dispatch => ({});
 
 class HomeScreen extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { show: true };
-
-    this.toggleFragment = this.toggleFragment.bind(this);
-  }
-
-  toggleFragment = () => {
-    const { show } = this.state;
-    this.setState({ show: !show });
-  };
-
   render() {
     return (
       <React.Fragment>
@@ -55,18 +43,10 @@ class HomeScreen extends Component {
             </Link>
           </div>
         </div>
-        <br /> <br />
-        {this.state.show}
         {this.props.children}
       </React.Fragment>
     );
   }
 }
-
-// class Box extends Component {
-//   render() {
-//     return
-//   }
-// }
 
 export default HomeScreen;
