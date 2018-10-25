@@ -58,4 +58,5 @@ const PromptModal = ({
     </div>
   );
 };
+
 export default PromptModal;
