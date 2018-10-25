@@ -6,12 +6,18 @@ import Credits from "./Credits";
 import { Link } from "react-router-dom";
 import "./style/HomeScreen.css";
 import NavBar from "./NavBar.js";
+// import ModalRoot from "./componets/ModalRoot.js";
 
 const mapStateToProps = function(state, props) {
   return {};
 };
 
-const mapDispatchToProps = dispatch => ({});
+// const mapDispatchToProps = dispatch => ({
+//   hideModal: () => dispatch(hideModal()),
+//   showModal: (modalProps, modalType) => {
+//     dispatch(showModal({ modalProps, modalType }));
+//   }
+// });
 
 class HomeScreen extends Component {
   render() {
