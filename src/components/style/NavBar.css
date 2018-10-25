@@ -1,4 +1,4 @@
-.heading-primary {
+/* .heading-primary {
   color: black;
   text-transform: uppercase;
 
@@ -8,9 +8,9 @@
   margin: 20px;
   display: block;
   margin: 0 auto;
-}
+} */
 
-/* .person {
+.person {
   margin: 10px;
   border: 1px solid #eee;
   box-shadow: 0 2px 2px #ccc;
@@ -19,4 +19,4 @@
   background-color: gray;
   margin: 0% auto;
   padding: 1.5rem 4rem;
-} */
+}
