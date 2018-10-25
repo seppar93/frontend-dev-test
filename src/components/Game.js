@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Board from "./Board";
 import MoveList from "./MoveList";
+import NavBar from "./NavBar";
+
 import { calculateWinner, cloneNestedArray } from "../utils";
 
 class Game extends Component {
@@ -88,28 +90,6 @@ class Game extends Component {
     steps[step].classList.add("selected");
   };
 
-  // checkWinner() {
-  //   let winLines = [
-  //     ["0", "1", "2"],
-  //     ["3", "4", "5"],
-  //     ["6", "7", "8"],
-  //     ["0", "3", "6"],
-  //     ["1", "4", "7"],
-  //     ["2", "5", "8"],
-  //     ["0", "4", "8"],
-  //     ["2", "4", "6"]
-  //   ];
-  //   for (let index = 0; index < winLines.length; index++) {
-  //     const [a, b, c] = winLines[index];
-  //     let board = this.state.board;
-
-  //     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-  //       alert("you won");
-  //       winner: this.state.player;
-  //     }
-  //   }
-  // }
-
   render() {
     const { highLights, history, stepNumber, xIsNext } = this.state;
     const current = history[stepNumber];
@@ -130,6 +110,7 @@ class Game extends Component {
 
     return (
       <div className="game">
+        <NavBar />
         <div className="game-board">
           <Board
             highLights={highLights}

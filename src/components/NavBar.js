@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Game from "./Game";
-import NewGame from "./NewGame";
 import Credits from "./Credits";
 import { Link } from "react-router-dom";
+import "./style/NavBar.css";
 
 const mapStateToProps = function(state, props) {
   return {};
@@ -14,17 +14,12 @@ const mapDispatchToProps = dispatch => ({});
 class NavBar extends Component {
   render() {
     return (
-      <nav className="navbar navbar-expand-md navbar-dark bg-primary mb-4">
-        <div className="container">
-          <Link to="/" className="navbar-brand" />
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#navbarMain"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
+      <nav>
+        <div>
+          <img
+            className="heading-primary"
+            src={require("../assets/logo.png")}
+          />
         </div>
       </nav>
     );
