@@ -32,11 +32,22 @@ button.square {
   width: 200px;
   height: 200px;
   margin-left: 80%;
-  margin-bottom: 150%;
+  /* margin-bottom: 150%; */
   background-color: #34495e;
   color: #fff;
   border: 6px solid #2c3e50;
   border-radius: 10px;
   text-align: center;
   position: relative;
+}
+
+.player-info {
+  margin: 10px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 2px #ccc;
+  width: 200px;
+  padding: 20px;
+  background-color: gray;
+  /* margin: 0% auto; */
+  padding: 1.5rem 4rem;
 }

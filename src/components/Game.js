@@ -4,6 +4,7 @@ import MoveList from "./MoveList";
 import NavBar from "./NavBar";
 
 import { calculateWinner, cloneNestedArray } from "../utils";
+import NewGame from "./NewGame";
 
 class Game extends Component {
   constructor(props) {
@@ -117,6 +118,9 @@ class Game extends Component {
             squares={current.squares}
             onClick={(x, y) => this.handleClick(x, y)}
           />
+        </div>
+        <div className="player-info">
+          <NewGame />
         </div>
         <div className="game-info">
           <div>{status}</div>

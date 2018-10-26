@@ -29,24 +29,23 @@ class HomeScreen extends Component {
             <Link
               onClick={this.toggleFragment}
               className="btn btn--white btn--animated"
+              to={"/game"}
+            >
+              New Game
+            </Link>
+            <Link
+              onClick={this.toggleFragment}
+              className="btn btn--white btn--animated"
               to={"/credits"}
             >
               Credits
             </Link>
-            <Link
-              onClick={this.toggleFragment}
+            <a
               className="btn btn--white btn--animated"
-              to={"/game"}
+              href="https://www.seedbox.com/en/"
             >
-              Game
-            </Link>
-            <Link
-              onClick={this.toggleFragment}
-              className="btn btn--white btn--animated"
-              to={"/new-game"}
-            >
-              New Game
-            </Link>
+              Exit
+            </a>
           </div>
         </div>
         {this.props.children}
